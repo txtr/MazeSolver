@@ -1,4 +1,4 @@
-# Install script for directory: /home/shubham/Desktop/CODE/maze-solver/Displayer
+# Install script for directory: /home/shubham/Desktop/CODE/maze-solver/MazeSolver/Displayer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/shubham/Desktop/CODE/maze-solver/Displayer/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/shubham/Desktop/CODE/maze-solver/MazeSolver/Displayer/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

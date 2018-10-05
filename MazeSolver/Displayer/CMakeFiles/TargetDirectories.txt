@@ -1,3 +1,3 @@
-/home/shubham/Desktop/CODE/maze-solver/Displayer/CMakeFiles/rebuild_cache.dir
-/home/shubham/Desktop/CODE/maze-solver/Displayer/CMakeFiles/displayer.out.dir
-/home/shubham/Desktop/CODE/maze-solver/Displayer/CMakeFiles/edit_cache.dir
+/home/shubham/Desktop/CODE/maze-solver/MazeSolver/Displayer/CMakeFiles/rebuild_cache.dir
+/home/shubham/Desktop/CODE/maze-solver/MazeSolver/Displayer/CMakeFiles/displayer.out.dir
+/home/shubham/Desktop/CODE/maze-solver/MazeSolver/Displayer/CMakeFiles/edit_cache.dir

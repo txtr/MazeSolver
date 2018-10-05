@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shubham/Desktop/CODE/maze-solver/Displayer
+CMAKE_SOURCE_DIR = /home/shubham/Desktop/CODE/maze-solver/MazeSolver/Displayer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shubham/Desktop/CODE/maze-solver/Displayer
+CMAKE_BINARY_DIR = /home/shubham/Desktop/CODE/maze-solver/MazeSolver/Displayer
 
 #=============================================================================
 # Target rules for target CMakeFiles/displayer.out.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/shubham/Desktop/CODE/maze-solver/Displayer
 CMakeFiles/displayer.out.dir/all:
 	$(MAKE) -f CMakeFiles/displayer.out.dir/build.make CMakeFiles/displayer.out.dir/depend
 	$(MAKE) -f CMakeFiles/displayer.out.dir/build.make CMakeFiles/displayer.out.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shubham/Desktop/CODE/maze-solver/Displayer/CMakeFiles --progress-num=1,2 "Built target displayer.out"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shubham/Desktop/CODE/maze-solver/MazeSolver/Displayer/CMakeFiles --progress-num=1,2 "Built target displayer.out"
 .PHONY : CMakeFiles/displayer.out.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/displayer.out.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/displayer.out.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shubham/Desktop/CODE/maze-solver/Displayer/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shubham/Desktop/CODE/maze-solver/MazeSolver/Displayer/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/displayer.out.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shubham/Desktop/CODE/maze-solver/Displayer/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shubham/Desktop/CODE/maze-solver/MazeSolver/Displayer/CMakeFiles 0
 .PHONY : CMakeFiles/displayer.out.dir/rule
 
 # Convenience name for target.

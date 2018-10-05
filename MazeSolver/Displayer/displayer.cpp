@@ -3,9 +3,9 @@
 using namespace cv;
 using namespace std;
 
-int main(int argc, char** argv ) {
+int main() {
     FILE *solution;
-    solution = fopen ("maze.txt", "r");
+    solution = fopen ("solution.txt", "r");
     int rows = 0, cols = 0;
     fscanf(solution, "%d %d", &rows, &cols);
     int arr[rows][cols];
@@ -13,23 +13,28 @@ int main(int argc, char** argv ) {
     int row, col;
     for (row = 0; row < rows; row++){
         for (col = 0; col < cols; col++){
-            char space;
             fscanf(solution, "%d", &arr[row][col]);
-            fscanf(solution, "%c", &space);
         }
     }
 
-    Mat maze = Mat::zeros(rows, cols, CV_8UC1);
+    Mat maze = Mat::zeros(rows, cols, CV_8UC3);
+    cout << rows << endl << cols << endl;
+
+
+
+    int scale = 1;
 
 	for(int i=0;i<maze.rows;i++) {
 		for (int j=0;j<maze.cols;j++) {
-		    if (arr[i][j] == 0) maze.at<cv::Vec3b>(i,j/2)[0] = 255;   maze.at<cv::Vec3b>(i,j/2)[1] = 255; maze.at<cv::Vec3b>(i,j/2)[2] = 255;
-		    if (arr[i][j] == 1) maze.at<cv::Vec3b>(i,j/2)[0] = 0  ;   maze.at<cv::Vec3b>(i,j/2)[1] = 0  ; maze.at<cv::Vec3b>(i,j/2)[2] = 0  ;
-		    if (arr[i][j] == 2) maze.at<cv::Vec3b>(i,j/2)[0] = 0  ;   maze.at<cv::Vec3b>(i,j/2)[1] = 255; maze.at<cv::Vec3b>(i,j/2)[2] = 0  ;
-		    if (arr[i][j] == 3) maze.at<cv::Vec3b>(i,j/2)[0] = 255;   maze.at<cv::Vec3b>(i,j/2)[1] = 0  ; maze.at<cv::Vec3b>(i,j/2)[2] = 0  ;
-		    if (arr[i][j] == 4) maze.at<cv::Vec3b>(i,j/2)[0] = 0  ;   maze.at<cv::Vec3b>(i,j/2)[1] = 0  ; maze.at<cv::Vec3b>(i,j/2)[2] = 255;
+		    if (arr[i][j] == 0) {maze.at<cv::Vec3b>(i,j/scale)[0] = 255;   maze.at<cv::Vec3b>(i,j/scale)[1] = 255; maze.at<cv::Vec3b>(i,j/scale)[2] = 255;}
+		    else if (arr[i][j] == 1) {maze.at<cv::Vec3b>(i,j/scale)[0] = 0  ;   maze.at<cv::Vec3b>(i,j/scale)[1] = 0  ; maze.at<cv::Vec3b>(i,j/scale)[2] = 0  ;}
+		    else if (arr[i][j] == 2) {maze.at<cv::Vec3b>(i,j/scale)[0] = 0  ;   maze.at<cv::Vec3b>(i,j/scale)[1] = 255; maze.at<cv::Vec3b>(i,j/scale)[2] = 0  ;}
+		    else if (arr[i][j] == 3) {maze.at<cv::Vec3b>(i,j/scale)[0] = 255;   maze.at<cv::Vec3b>(i,j/scale)[1] = 0  ; maze.at<cv::Vec3b>(i,j/scale)[2] = 0  ;}
+		    else if (arr[i][j] == 4) {maze.at<cv::Vec3b>(i,j/scale)[0] = 0  ;   maze.at<cv::Vec3b>(i,j/scale)[1] = 0  ; maze.at<cv::Vec3b>(i,j/scale)[2] = 255;}
 		}
 	}
+
+    cout << "R (python)  = " << endl << format(maze, Formatter::FMT_PYTHON) << endl << endl;
 
 	namedWindow("SOLUTION", WINDOW_AUTOSIZE ); // Create a window for display.
     imshow( "SOLUTION", maze);                // Show our image inside it.

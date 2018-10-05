@@ -59,7 +59,7 @@ struct Node *deQueue (struct Queue *q) {
 struct Node *simulateMaze (int rows, int cols, int arr[rows][cols], struct Queue *q) {
     struct Node *thisNode = deQueue(q);
 
-    if (arr[thisNode->x][thisNode->y]) return thisNode;
+    if (arr[thisNode->x][thisNode->y] == 3) return thisNode;
     else {
         if (arr[thisNode->x +1][thisNode->y] != 1){
             arr[thisNode->x +1][thisNode->y] == 1;
@@ -103,6 +103,7 @@ int main(int argc, char const *argv[]) {
     FILE *maze;
     maze = fopen ("maze.txt", "r");
 
+
     int rows = -1, cols = -1;
     fscanf (maze, "%d %d", &rows, &cols);
     printf("DIM = %d %d\n", rows, cols);
@@ -124,6 +125,7 @@ int main(int argc, char const *argv[]) {
             }
         }
     }
+
 
     if (src_x <0 || src_y < 0 || dst_x < 0 || dst_y < 0) {
         printf ("ERROR : No source or destination found\n");
@@ -153,7 +155,7 @@ int main(int argc, char const *argv[]) {
     fprintf(solution, "%d %d\n", rows, cols);
     for (row = 0; row < rows; row++){
         for (col = 0; col < cols; col++){
-            fprintf(solution, "%d", arr[row][col]);
+            fprintf(solution, "%d ", arr[row][col]);
         }
         fprintf(solution, "\n");
     }

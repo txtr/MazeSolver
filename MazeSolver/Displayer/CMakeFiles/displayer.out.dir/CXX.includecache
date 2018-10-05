@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/shubham/Desktop/CODE/maze-solver/Displayer/displayer.cpp
+/home/shubham/Desktop/CODE/maze-solver/MazeSolver/Displayer/displayer.cpp
 opencv2/opencv.hpp
 -
 iostream

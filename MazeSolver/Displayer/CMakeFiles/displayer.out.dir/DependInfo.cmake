@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/shubham/Desktop/CODE/maze-solver/Displayer/displayer.cpp" "/home/shubham/Desktop/CODE/maze-solver/Displayer/CMakeFiles/displayer.out.dir/displayer.cpp.o"
+  "/home/shubham/Desktop/CODE/maze-solver/MazeSolver/Displayer/displayer.cpp" "/home/shubham/Desktop/CODE/maze-solver/MazeSolver/Displayer/CMakeFiles/displayer.out.dir/displayer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
